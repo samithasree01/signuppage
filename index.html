@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>sam</title>
+ <style>
+ body{
+    background-color: pink;
+}
+.s{
+text-align: center;
+}
+.box{
+    text-align: center;
+    padding: 30px;
+    border: 2px solid;
+    margin: auto;
+    width: 300px;
+}
+    </style>
+   
+</head>
+<body>
+    <div class="s">
+    <h1 >Sign up</h1>
+</div>
+<div class="box">
+<form>
+        <b><p style="text-align: center;">Login</p></b>
+        <label for="email">Email:</label>
+        <input type="email" id="user" name="user">
+        <p>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass">
+        </p>
+        <p>
+            <input type="submit" id="submit" onclick = "ValidateEmail(document.form[0].user)">
+        </p>
+</form>
+</div>
+<script>
+    function validateEmail(inputText) {
+  var mailFormat =  /\S+@\S+\.\S+/;
+  if (inputText.value.match(mailFormat)) {
+    alert("Valid address!");
+    return true;
+  } else {
+    alert("Invalid address!");
+    return false;
+  }
+}
+ </script>
+</body>
+</html>
